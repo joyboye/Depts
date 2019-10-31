@@ -1,0 +1,85 @@
+﻿@page
+@model Navistar2.Pages.myDeptOwner.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DeptOwner</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Department_Owner)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Department_Owner)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.DepartmentNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.DepartmentNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Department_description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Department_description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Finance_Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Finance_Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Employee_Record_Number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Employee_Record_Number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.First_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.First_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Last_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Last_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Supervisor_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Supervisor_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Job_Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Job_Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Employee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Employee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptOwner.Contractor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptOwner.Contractor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.DeptOwner.DOID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

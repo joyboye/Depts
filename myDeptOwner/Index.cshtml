@@ -1,0 +1,96 @@
+﻿@page
+@model Navistar2.Pages.myDeptOwner.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Department_Owner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].DepartmentNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Department_description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Finance_Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Employee_Record_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Supervisor_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Job_Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Employee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeptOwner[0].Contractor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DeptOwner) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department_Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Finance_Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee_Record_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supervisor_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Job_Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contractor)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.DOID" class="btn-dark">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.DOID" class="btn-dark">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.DOID"class="btn-dark">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

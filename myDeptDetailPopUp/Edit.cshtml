@@ -1,0 +1,85 @@
+﻿@page
+@model Navistar2.Pages.myDeptDetailPopUp.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>DeptDetailPopUp</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DeptDetailPopUp.DID" />
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.SLT" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.SLT" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.SLT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Department" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Department" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Department_description" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Department_description" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Department_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Finance_Department" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Finance_Department" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Finance_Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Employee_Record_Number" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Employee_Record_Number" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Employee_Record_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.First_Name" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.First_Name" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.First_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Last_Name" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Last_Name" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Last_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Supervisor_Name" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Supervisor_Name" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Supervisor_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Job_Title" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Job_Title" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Job_Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Employee" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Employee" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Employee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptDetailPopUp.Contractor" class="control-label"></label>
+                <input asp-for="DeptDetailPopUp.Contractor" class="form-control" />
+                <span asp-validation-for="DeptDetailPopUp.Contractor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

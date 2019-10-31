@@ -1,0 +1,88 @@
+﻿@page
+@model Navistar2.Pages.myDeptDetailPopUp.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DeptDetailPopUp</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.SLT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.SLT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Department_description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Department_description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Finance_Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Finance_Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Employee_Record_Number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Employee_Record_Number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.First_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.First_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Last_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Last_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Supervisor_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Supervisor_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Job_Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Job_Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Employee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Employee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DeptDetailPopUp.Contractor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DeptDetailPopUp.Contractor)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="DeptDetailPopUp.DID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

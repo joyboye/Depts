@@ -1,0 +1,84 @@
+﻿@page
+@model Navistar2.Pages.myDeptOwner.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>DeptOwner</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Department_Owner" class="control-label"></label>
+                <input asp-for="DeptOwner.Department_Owner" class="form-control" />
+                <span asp-validation-for="DeptOwner.Department_Owner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.DepartmentNumber" class="control-label"></label>
+                <input asp-for="DeptOwner.DepartmentNumber" class="form-control" />
+                <span asp-validation-for="DeptOwner.DepartmentNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Department_description" class="control-label"></label>
+                <input asp-for="DeptOwner.Department_description" class="form-control" />
+                <span asp-validation-for="DeptOwner.Department_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Finance_Department" class="control-label"></label>
+                <input asp-for="DeptOwner.Finance_Department" class="form-control" />
+                <span asp-validation-for="DeptOwner.Finance_Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Employee_Record_Number" class="control-label"></label>
+                <input asp-for="DeptOwner.Employee_Record_Number" class="form-control" />
+                <span asp-validation-for="DeptOwner.Employee_Record_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.First_Name" class="control-label"></label>
+                <input asp-for="DeptOwner.First_Name" class="form-control" />
+                <span asp-validation-for="DeptOwner.First_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Last_Name" class="control-label"></label>
+                <input asp-for="DeptOwner.Last_Name" class="form-control" />
+                <span asp-validation-for="DeptOwner.Last_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Supervisor_Name" class="control-label"></label>
+                <input asp-for="DeptOwner.Supervisor_Name" class="form-control" />
+                <span asp-validation-for="DeptOwner.Supervisor_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Job_Title" class="control-label"></label>
+                <input asp-for="DeptOwner.Job_Title" class="form-control" />
+                <span asp-validation-for="DeptOwner.Job_Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Employee" class="control-label"></label>
+                <input asp-for="DeptOwner.Employee" class="form-control" />
+                <span asp-validation-for="DeptOwner.Employee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptOwner.Contractor" class="control-label"></label>
+                <input asp-for="DeptOwner.Contractor" class="form-control" />
+                <span asp-validation-for="DeptOwner.Contractor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

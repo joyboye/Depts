@@ -1,0 +1,136 @@
+﻿@page
+@model Navistar2.Pages.myDeptDetail.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .btn-a {
+        border-radius: 8%;
+        width: 50%;
+        height: 80px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px;
+        color: black;
+        background: #5c94bd;
+        margin-bottom: 5%;
+    }
+
+    .btn-forecast {
+        border-radius: 8%;
+        width: 30%;
+        height: 80px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px;
+        color: black;
+        background: #5c94bd;
+        margin-bottom: 5%;
+    }
+
+    p {
+        border-radius: 8%;
+        width: 20%;
+        height: 10%;
+        text-align: center;
+        margin: 10px;
+        padding: 15px;
+        color: black;
+        background: #5c94bd;
+        margin-bottom: 5%;
+    }
+
+    .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+<section class="row">
+    <h2>Department Detail</h2>
+    @*<button class="btn-forecast">Forecast</button>*@
+</section>
+
+
+<section class="row">
+    <p>
+        <a asp-page="Create" class="btn-a">Create New</a>
+    </p>
+
+    <button class="btn">
+        <a asp-page="Save" class="btn-a">Save</a>
+    </button>
+    <button class="btn">
+        <a asp-page="Submit" class="btn-a">Submit</a>
+    </button>
+</section>
+
+
+<section style="color:black;" class="btn-sec">
+    <label>Department</label>
+    <input type="text" name="name" value="" />
+    <label>Owner</label>
+    <input type="text" name="name" value="" />
+    <label>Period</label>
+    <input type="text" name="name" value="" />
+</section>
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentDetail[0].Month)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentDetail[0].Approved)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentDetail[0].Employee)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentDetail[0].Contractor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentDetail[0].Open)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.DepartmentDetail)
+            {
+
+                
+                    <tr class="grid-item">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Month)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Approved)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Employee)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contractor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Open)
+                        </td>
+               
+<td>
+        <a asp-page="./Edit" asp-route-id="@item.DDID">Edit</a> |
+        <a asp-page="./Details" asp-route-id="@item.DDID">Details</a> |
+        <a asp-page="./Delete" asp-route-id="@item.DDID">Delete</a>
+    </td>
+    </tr>
+}
+            </tbody>
+            </table>
